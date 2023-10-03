@@ -14,7 +14,7 @@ RUN pip install -r requirements.txt
 RUN ["python", "-c", "import dotenv; dotenv.load_dotenv()"]
 
 # Expose the port your app runs on
-EXPOSE 5000
+EXPOSE 3000
 
 # Define environment variable for Flask to run in production mode
 ENV FLASK_ENV=development

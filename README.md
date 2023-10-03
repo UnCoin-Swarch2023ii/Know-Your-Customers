@@ -15,8 +15,6 @@ The microservice uses the followin technologies:
 
 ## Project Structure
 
-```bash
-.
 ├── .env
 ├── .env.example
 ├── app.py
@@ -24,7 +22,6 @@ The microservice uses the followin technologies:
 ├── requirements
 └── helpers
     └── s3Aws.ts
-```
 
 ## How to run
 
