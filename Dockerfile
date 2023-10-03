@@ -20,4 +20,4 @@ EXPOSE 3000
 ENV FLASK_ENV=development
 
 # Run app.py when the container launches
-CMD ["python", "app.py"]
+CMD ["bash", "-c", "python app.py & python helpers/imageConsumer.py"]

@@ -11,7 +11,7 @@ def send_images_to_queue(image1, image2,id_sesion ):
         image2_data = base64.b64encode(image_file.read()).decode('utf-8')
 
     # Create a RabbitMQ connection and channel
-    connection = pika.BlockingConnection(pika.ConnectionParameters('localhost'))
+    connection = pika.BlockingConnection(pika.ConnectionParameters('rabbitmq'))
     channel = connection.channel()
 
     # Declare a queue
