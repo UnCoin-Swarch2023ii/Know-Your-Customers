@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  # RabbitMQ service
+  rabbitmq:
+    image: rabbitmq
+    hostname: rabbitmq
+    container_name: rabbitmq
+    restart: always
+    expose:
+      - 5672
+
+  # KYC microservice (Flask app + imageConsumer.py)
+  kyc_ms:
+    image: sesanchezo/kyc_ms
+    container_name: kyc_ms
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - rabbitmq
